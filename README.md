@@ -17,6 +17,10 @@ The catalog is deliberately local and deterministic in v1. It does not call Gemi
 
 Production builds include `manifest.webmanifest` and a service worker that caches the app shell. Serve `dist/` over HTTPS (or localhost) to install it from the browser. Catalog records are held in IndexedDB, so the most recently imported catalog remains searchable offline.
 
+## Download
+
+[Download version 1.0](https://github.com/Himansho/pharmasearch/releases/tag/v1.0.0) · [Open the live PWA](https://pharmasearch-nine.vercel.app)
+
 PharmaSearch is a mobile-responsive, local-first PWA for searching a pharmacy medicine catalog. It also includes a secondary expiry-audit workflow for POS stock reports.
 
 - **Import** a `.xlsx` / `.xls` / `.csv` stock report — parsed entirely in the browser
