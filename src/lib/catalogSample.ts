@@ -1,0 +1,5 @@
+import type { ParsedSheet } from './parse.ts'
+const headers = ['Brand', 'Salt (Generic)', 'Strength', 'Form', 'Category', 'Manufacturer', 'Stock', 'Price', 'Famous']
+const rows = [['Dolo 650', 'Paracetamol', '650 mg', 'Tablet', 'Pain relief', 'Micro Labs', 45, 33.6, 'yes'], ['Crocin Advance', 'Paracetamol', '500 mg', 'Tablet', 'Pain relief', 'GSK', 22, 20, 'yes'], ['Calpol', 'Paracetamol', '500 mg', 'Tablet', 'Pain relief', 'GSK', 0, 18, 'no'], ['Azithral', 'Azithromycin', '500 mg', 'Tablet', 'Antibiotic', 'Alembic', 12, 119.5, 'yes'], ['Cetzine', 'Cetirizine', '10 mg', 'Tablet', 'Allergy', 'GSK', 40, 27.3, 'yes'], ['Allegra', 'Fexofenadine', '120 mg', 'Tablet', 'Allergy', 'Sanofi', 16, 218.6, 'yes'], ['Pan-D', 'Pantoprazole + Domperidone', '40/30 mg', 'Capsule', 'Gastric care', 'Alkem', 25, 199, 'yes']]
+export function sampleCatalogSheet(): ParsedSheet { const allRows = [headers, ...rows]; return { fileName: 'sample-medicine-catalog.csv', sheetName: 'Catalog', headers, rows: rows.map((row) => Object.fromEntries(headers.map((header, index) => [header, row[index] ?? null]))), previewRows: allRows, totalDataRows: rows.length } }
+
